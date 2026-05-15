@@ -9,7 +9,7 @@ app.use(express.json());
 
 // ── Configurações Z-API ──────────────────────
 const ZAPI_URL = "https://api.z-api.io/instances/3F3288DA6737F16864EC82171A0617F6/token/7CF3DEA9ABC54643813159A7/send-text";
-const ZAPI_CLIENT_TOKEN = "7CF3DEA9ABC54643813159A7";
+const ZAPI_CLIENT_TOKEN = process.env.ZAPI_CLIENT_TOKEN;
 
 // ── Configurações Claude ─────────────────────
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY; // Configurar no Railway como variável de ambiente
