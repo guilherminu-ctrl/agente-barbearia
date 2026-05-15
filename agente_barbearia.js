@@ -85,6 +85,7 @@ async function chamarAgente(telefone, mensagemCliente) {
   });
 
   const data = await res.json();
+  console.log("ERRO API:", JSON.stringify(data));
   const resposta = data.content?.[0]?.text || "Desculpe, tive um problema técnico. Um momento!";
 
   conversas[telefone].push({ role: "assistant", content: resposta });
