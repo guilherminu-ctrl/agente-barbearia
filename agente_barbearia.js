@@ -50,8 +50,7 @@ async function enviarMensagem(telefone, texto) {
   const res = await fetch(ZAPI_URL, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "Client-Token": ZAPI_CLIENT_TOKEN
+      "Content-Type": "application/json"
     },
     body: JSON.stringify({ phone: telefone.replace(/\D/g, ""), message: texto })
   });const result = await res.json(); console.log("Z-API resposta:", JSON.stringify(result)); return result;
