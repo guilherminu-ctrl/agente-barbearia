@@ -54,8 +54,8 @@ async function enviarMensagem(telefone, texto) {
       "Client-Token": ZAPI_CLIENT_TOKEN
     },
     body: JSON.stringify({ phone: telefone.replace(/\D/g, ""), message: texto })
-  });
-  return res.json();
+  });const result = await res.json(); console.log("Z-API resposta:", JSON.stringify(result)); return result;
+  
 }
 
 // ── Chama o agente Claude ─────────────────────
