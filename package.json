@@ -1,0 +1,12 @@
+{
+  "name": "agente-barbearia",
+  "version": "1.0.0",
+  "description": "Agente virtual WhatsApp para barbearia",
+  "main": "agente_barbearia.js",
+  "scripts": {
+    "start": "node agente_barbearia.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
