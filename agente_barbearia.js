@@ -53,7 +53,7 @@ async function enviarMensagem(telefone, texto) {
       "Content-Type": "application/json",
       "Client-Token": ZAPI_CLIENT_TOKEN
     },
-    body: JSON.stringify({ phone: telefone, message: texto })
+    body: JSON.stringify({ phone: telefone.replace(/\D/g, ""), message: texto })
   });
   return res.json();
 }
